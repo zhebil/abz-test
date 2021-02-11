@@ -1,0 +1,82 @@
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.button {
+    background-color: $primaryColor;
+    width: 210px;
+    height: 38px;
+    border-color: transparent;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: $buttonColor;
+    cursor: pointer;
+    outline: none;
+    &--disabled {
+        pointer-events: none;
+        background: $disabledBg;
+        color: $disabledColor;
+    }
+    &:hover,
+    &:focus {
+        background-color: $hoverColor;
+    }
+    &:active {
+        background: $secondaryColor;
+    }
+}
+
+.section-padding {
+    padding-top: 160px;
+    padding-bottom: 160px;
+}
+
+.title {
+    color: $textColorH;
+    font-size: 50px;
+    line-height: 54px;
+    text-align: center;
+}
+
+.link {
+    font-size: 16px;
+    font-weight: 600;
+    color: $primaryColor;
+    transition: all 0.4s ease;
+    outline: none;
+    &:hover,
+    &:focus {
+        color: $hoverColor;
+    }
+    &:active {
+        text-decoration: underline;
+    }
+}
+
+.p {
+    font-size: 16px;
+    line-height: 24px;
+    p:not(:last-child) {
+        margin-bottom: 30px;
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0)
+}

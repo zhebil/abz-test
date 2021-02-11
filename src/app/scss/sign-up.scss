@@ -1,0 +1,153 @@
+.sign-up {
+    font-family: $ff2;
+    &__title {
+        margin-bottom: 18px;
+    }
+    &__subtitle {
+        text-align: center;
+        margin: 0 auto 36px;
+        max-width: 447px;
+    }
+    &__form {
+        max-width: 467px;
+        margin: 0 auto;
+    }
+    &__item {
+        margin-bottom: 27px;
+    }
+    &__label {
+        color: $textColorH;
+        font-size: 16px;
+        line-height: 28px;
+        display: block;
+        margin-bottom: 14px;
+    }
+    &__input {
+        height: 38px;
+        background-color: #ffffff;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        width: 100%;
+        padding: 14px;
+        outline: none;
+        transition: all 0.2s ease;
+        &:hover {
+            border-color: #80bdff;
+        }
+        &:active,
+        &:focus {
+            border-color: #80bdff;
+            box-shadow: 0 0 0px 3px rgba(#80bdff, 0.2);
+        }
+        &:disabled {
+            pointer-events: none;
+            background: $disabledBg;
+        }
+        &--error {
+            border-color: $primaryColor;
+            box-shadow: 0 0 0px 3px rgba($primaryColor, 0.2);
+            &:active,
+            &:focus {
+                border-color: $primaryColor;
+                box-shadow: 0 0 0px 3px rgba($primaryColor, 0.2);
+            }
+        }
+    }
+    &__text {
+        font-family: $ff;
+        font-size: 12px;
+        line-height: 1.2;
+        color: $grayTextColor;
+        margin-top: 10px;
+    }
+    &__radio-label {
+        display: block;
+        font-size: 16px;
+        line-height: 28px;
+        color: $textColorH;
+        padding-left: 26px;
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            left: 0;
+            top: 6px;
+            border: 1px solid #adb5bd;
+            border-radius: 50%;
+            background: #fff;
+            transition: all 0.4s ease;
+        }
+        &--active {
+            &:after {
+                border: 5px solid $secondaryColor;
+            }
+        }
+    }
+    &__file-label {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 38px;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        outline: none;
+        transition: all 0.2s ease;
+        &:hover {
+            border-color: #80bdff;
+            .sign-up__file-input {
+                border-color: #80bdff;
+            }
+        }
+        &:active,
+        &:focus {
+            border-color: #80bdff;
+            box-shadow: 0 0 0px 3px rgba(#80bdff, 0.2);
+            .sign-up__file-input {
+                border-color: #80bdff;
+                box-shadow: 0 0 0px 3px rgba(#80bdff, 0.2);
+            }
+        }
+        &:disabled {
+            pointer-events: none;
+            background: $disabledBg;
+        }
+        &--error {
+            border-color: $primaryColor;
+            box-shadow: 0 0 0px 3px rgba($primaryColor, 0.2);
+            &:active,
+            &:focus {
+                border-color: $primaryColor;
+                box-shadow: 0 0 0px 3px rgba($primaryColor, 0.2);
+                .sign-up__file-input {
+                    border-color: $primaryColor;
+                    box-shadow: 0 0 0px 3px rgba($primaryColor, 0.2);
+                }
+            }
+        }
+    }
+    &__file-input {
+        margin-left: auto;
+        font-size: 16px;
+        line-height: 28px;
+        color: $textColorH;
+        background-color: #f8f7f5;
+        border: none;
+        outline: none;
+        border-left: 1px solid #d4d9de;
+        border-radius: 0px 4px 4px 0px;
+        width: 83px;
+        height: 100%;
+    }
+    &__file-text {
+        font-size: 16px;
+        line-height: 28px;
+        color: #b2b9c0;
+        width: 100%;
+        padding-left: 15px;
+    }
+    &__button {
+        margin: 40px auto 0;
+    }
+}

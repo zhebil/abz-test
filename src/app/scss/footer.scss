@@ -1,0 +1,13 @@
+.footer {
+    border-top: 1px solid #ececec;
+    &__text {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 16px;
+        line-height: 24px;
+        color: #4c4b4b;
+    }
+}

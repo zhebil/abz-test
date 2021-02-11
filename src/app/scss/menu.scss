@@ -1,0 +1,29 @@
+.menu {
+    &__burger {
+        display: none;
+    }
+    &__burger-btn {}
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+    &__item {
+        list-style: none;
+        padding: 0 15px;
+        &:last-child {
+            padding-right: 0;
+        }
+        &:first-child {
+            padding-left: 0;
+        }
+    }
+    &__link {
+        color: $textColorH;
+        font-size: 14px;
+        line-height: normal;
+        transition: all 0.4s ease;
+        &:hover {
+            color: $primaryColor;
+        }
+    }
+}
