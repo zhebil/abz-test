@@ -4,12 +4,14 @@ import { withApiService } from "../hoc/withApiService";
 import Spinner from "../utility/spinner";
 import ErrorIndicator from "../utility/error-indicator";
 import { useDispatch, useSelector } from "react-redux";
-import { addUsers } from "../../actions";
+import { addUsers, setPage } from "../../actions";
 function Users({ apiService }) {
   const [fetch, setFetch] = useState({ loading: true, error: false });
   const users = useSelector((state) => state.users);
+  const usersFetch = useSelector((state) => state.usersFetch);
+  const pageCounter = useSelector((state) => state.usersPage);
   const dispatch = useDispatch();
-  const [pageCounter, setPageCounter] = useState(1);
+
   const [maxPage, setMaxPage] = useState(0);
 
   useEffect(() => {
@@ -18,7 +20,6 @@ function Users({ apiService }) {
     apiService
       .getUsers(pageCounter)
       .then((data) => {
-        console.log(data);
         if (mount) dispatch(addUsers(data.users));
         setMaxPage(data.total_pages);
         setFetch({ loading: false, error: false });
@@ -30,14 +31,14 @@ function Users({ apiService }) {
     return () => {
       mount = false;
     };
-  }, [apiService, dispatch, pageCounter]);
+  }, [apiService, dispatch, pageCounter, usersFetch]);
 
   if (fetch.error) {
     return <ErrorIndicator />;
   }
 
   const onShowMore = () => {
-    setPageCounter(pageCounter + 1);
+    dispatch(setPage());
   };
   return (
     <section className="users section-padding">

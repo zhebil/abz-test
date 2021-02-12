@@ -46,6 +46,9 @@
         &--error {
             border-color: $primaryColor;
             box-shadow: 0 0 0px 3px rgba($primaryColor, 0.2);
+            &:hover {
+                border-color: $primaryColor;
+            }
             &:active,
             &:focus {
                 border-color: $primaryColor;
@@ -59,6 +62,9 @@
         line-height: 1.2;
         color: $grayTextColor;
         margin-top: 10px;
+        &--error {
+            color: $primaryColor;
+        }
     }
     &__radio-label {
         display: block;
@@ -116,6 +122,16 @@
         &--error {
             border-color: $primaryColor;
             box-shadow: 0 0 0px 3px rgba($primaryColor, 0.2);
+            .sign-up__file-input {
+                border-color: $primaryColor;
+                box-shadow: 0 0 0px 3px rgba($primaryColor, 0.2);
+            }
+            &:hover {
+                border-color: $primaryColor;
+                .sign-up__file-input {
+                    border-color: $primaryColor;
+                }
+            }
             &:active,
             &:focus {
                 border-color: $primaryColor;

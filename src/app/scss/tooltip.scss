@@ -1,0 +1,39 @@
+.tooltip-enter {
+    opacity: 0;
+}
+
+.tooltip-enter-active {
+    opacity: 1;
+    transition: opacity 400ms;
+}
+
+.tooltip-exit {
+    opacity: 1;
+}
+
+.tooltip-exit-active {
+    opacity: 0;
+    transition: opacity 400ms;
+}
+
+.tooltip-exit-done {
+    opacity: 0;
+}
+
+.tooltip {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, 0);
+    width: fit-content;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 2px 3px 8px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.2;
+    color: $buttonColor;
+}

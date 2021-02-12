@@ -5,7 +5,7 @@ import { loadPositions } from "../../actions";
 import { withApiService } from "../hoc/withApiService";
 import ErrorIndicator from "../utility/error-indicator";
 import Spinner from "../utility/spinner";
-import Form from "./form";
+import Form from "./form/form";
 
 function SignUp({ apiService }) {
   const [fetch, setFetch] = useState({ loading: true, error: false });

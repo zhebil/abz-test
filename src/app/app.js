@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Footer from "./components/footer";
 import Header from "./components/header";
+import Modal from "./components/modal";
 import Home from "./pages/Home";
 import NotFound from "./pages/Not-found";
 import User from "./pages/User";
@@ -25,6 +26,7 @@ function App() {
         </Switch>
       </main>
       <Footer />
+      <Modal/>
     </Router>
   );
 }

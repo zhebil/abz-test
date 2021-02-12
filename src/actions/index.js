@@ -10,3 +10,19 @@ export const loadPositions = (positions)=> {
         payload: positions
     }
 }
+export const deletePositions = ()=> {
+    return {
+        type: "DELETE_POSITIONS"
+    }
+}
+export const setPage = ()=> {
+    return {
+        type: "SET_PAGE"
+    }
+}
+
+export const setShowModal = ()=>{
+    return {
+        type: "SET_SHOW_MODAL"
+    }
+}
