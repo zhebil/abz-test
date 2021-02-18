@@ -36,15 +36,16 @@
 }
 
 .section-padding {
-    padding-top: 160px;
+    padding-top: 152px;
     padding-bottom: 160px;
 }
 
 .title {
     color: $textColorH;
-    font-size: 50px;
+    font-size: 49px;
     line-height: 54px;
     text-align: center;
+    font-weight: normal;
 }
 
 .link {
@@ -66,7 +67,7 @@
     font-size: 16px;
     line-height: 24px;
     p:not(:last-child) {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 }
 
